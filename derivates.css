@@ -1,0 +1,36 @@
+div{
+	position: absolute;
+	left: 2.5%;
+	width: 95%;
+	height: 30vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div h3{
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	font-family: 'ABeeZee';
+	color: white;
+	margin: 0;
+	padding: 0;
+	font-size: 2em;
+}
+
+input{
+	position: fixed;
+	height: 5%;
+	width: 10%;
+	top: 20%;
+	left: 45%;
+	right: 45%;
+
+	text-align: center;
+	background-color: #1B1B1B;
+	font-size: 1.3em;
+	color: white;
+	border: none;
+}

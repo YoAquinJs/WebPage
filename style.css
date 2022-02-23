@@ -1,0 +1,110 @@
+body{
+	background-color: black;
+	max-width: 100%;
+    overflow-x: hidden;
+}
+
+nav{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	margin-left: -10px;
+}
+
+nav ul{
+	list-style-type: none;
+  	overflow: hidden;
+  	width: 100%;
+  	height: 100%;
+  	margin: 0;
+  	padding: 0;
+}
+
+nav ul li{
+	float: left;
+	width: 16.6%;
+}
+
+.nav-item{
+	color: #DCDCDC	;
+	font-family: ABeeZee;
+	font-size: 2em;
+  	display: block;
+  	text-align: center;
+  	text-decoration: none;
+}
+
+nav ul li a:hover{
+	color: white;
+	transform: scale(1.15);
+	transition: 0.5s;
+}
+
+header{
+	position: absolute;
+	width: 99%;
+	height: 95vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header h2{
+	position: relative;
+	overflow: hidden;
+	color: white;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 9em;
+}
+
+section{
+	position: absolute;
+	width: 100%;
+	height: 95vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	display: flex;
+}
+
+footer h2{
+	position: relative;
+	overflow: hidden;
+	color: white;
+	font-family: Montserrat Subrayada;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 1.4em;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

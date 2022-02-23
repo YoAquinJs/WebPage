@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1">
+    <title>Web Page</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <!-- Monoton -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+    <!-- Montserrat Subrayada -->
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Monoton&display=swap" rel="stylesheet">
+    <!-- Allerta Stencil -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <!-- Lato -->
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <!-- ABeeZee -->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="derivates.css">
+    <script src="background.js"></script>
+    <script src="derivates.js"></script>
+</head>
+<body>
+    <!-- Navegation bar -->
+    <nav style="z-index:1">
+        <ul>
+            <li><p class="nav-item unselectable" style="opacity: 0;">Blank</p></li>
+            <li><a class="nav-item unselectable" href="home.html">Home</a></li>
+            <li><a class="nav-item unselectable" href="calculator.html">Trigonometría</a></li>
+            <li><a class="nav-item unselectable" href="derivates.html">Derivadas</a></li>
+            <li><a class="nav-item unselectable" href="index.html">Movimiento Parabólico</a></li>
+            <li><p class="nav-item unselectable" style="opacity: 0;">Blank</p></li>
+        </ul> 
+    </nav>
+
+        <!-- Background -->
+    <section style="z-index: -1;">
+        <img src="images/1.png" data-speed="10" class="layer">
+        <img src="images/2.png" data-speed="5" class="layer">
+        <img src="images/3.png" data-speed="2" class="layer">
+        <img src="images/4.png" data-speed="6" class="layer">
+        <img src="images/5.png" data-speed="8" class="layer">
+        <img src="images/6.png" data-speed="-2" class="layer">
+        <img src="images/7.png" data-speed="4" class="layer">
+        <img src="images/8.png" data-speed="-9" class="layer">
+        <img src="images/9.png" data-speed="6" class="layer">
+        <img src="images/10.png" data-speed="-7" class="layer">
+        <img src="images/11.png" data-speed="-3" class="layer">
+        <img src="images/12.png" data-speed="5" class="layer">
+    </section>
+
+    <input style="z-index: 1;" id="input" type="math-num" name="input" onchange="update()">
+
+    <div style="top: 16%;">
+        <h3 style="color: #D7D7D7;" id="txt1" class="unselectable">_</h3>
+    </div>
+
+    <div style="top: 24%;">
+        <h3 style="color: #D7D7D7;" id="txt2" class="unselectable">_</h3>
+    </div>
+
+    <div style="top: 32%;">
+        <h3 style="color: #D7D7D7;" id="txt3" class="unselectable">_</h3>
+    </div>
+
+    <div style="top: 40%;">
+        <h3 style="color: #D7D7D7;" id="txt4" class="unselectable">_</h3>
+    </div>
+
+    <div style="top: 48%;">
+        <h3 style="color: #D7D7D7;" id="txt5" class="unselectable">_</h3>
+    </div>
+
+    <div style="top: 56%;">
+        <h3 style="color: #D7D7D7;" id="txt6" class="unselectable">_</h3>
+    </div>
+
+<!--     <div style="top: 70%;">
+        <h3 style="margin-right: 3%" class="unselectable">
+            dx f(x): lim h→0 (f(x+h)-f(x))/h
+        </h3>
+        <h3 style="margin-right: 3%; margin-left: 3%"class="unselectable">
+            Demostracion: f(x)=x^y | dx f(x) = y(x^(y-1))
+        </h3>
+        <h3 style="margin-left: 3%" class="unselectable">
+            Segundo termino: y((x^(y-1))h)
+        </h3>
+    </div>
+ -->
+    <!-- Derivate Formula -->
+    <div style="top: 72%; height: 20vh; left: 12%; width: 30%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            f(x+h)-f(x)
+        </h3>
+    </div>
+    <div style="top: 76%; height: 20vh; left: 12%; width: 30%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">dx f(x)=――――――</h3>     
+    </div>
+    <div style="top: 80%; height: 20vh; left: 12%; width: 30%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h
+        </h3>
+    </div>
+
+    <!-- Demonstration -->
+    <div style="top: 72%; height: 20vh; left: 35%; width: 28.7%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">
+            Demostracion:
+        </h3>
+    </div>
+    <div style="top: 76%; height: 20vh; left: 35%; width: 28.7%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">
+            f(x)=x^y
+        </h3>     
+    </div>
+    <div style="top: 80%; height: 20vh; left: 35%; width: 28.7%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">
+            dx f(x)=y(x)^(y-1)
+        </h3>
+    </div>
+
+    <!-- Explanation -->
+    <div style="top: 68%; height: 20vh; left: 60%; width: 30%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">
+            ((x+h)^y - x^y)/h
+        </h3>
+    </div>
+    <div style="top: 72%; height: 20vh; left: 60%; width: 30%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">
+            2°Termino (x+h)^y: y(x)^(y-1)(h)
+        </h3>
+    </div>
+    <div style="top: 76%; height: 20vh; left: 58%; width: 33%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">
+            x^y + ... - x^y: (x^(y-n)h^(n-1) + ... + h^y)/h
+        </h3>     
+    </div>
+    <div style="top: 80%; height: 20vh; left: 60%; width: 30%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">
+            h(...)/h: y(x)^(y-1) + ... + h^(y-1)
+        </h3>
+    </div>
+    <div style="top: 89%; height: 10vh; left: 60%; width: 30%;">
+        <h3 style="font-size: 1.5em;" class="unselectable">
+            lim h→0: y(x)^(y-1)
+        </h3>
+    </div>
+
+    <footer>
+        <h2 class="unselectable">Demostración Propiedad Derivadas</h2>
+    </footer>
+</body>
+</html>
