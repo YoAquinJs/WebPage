@@ -1,16 +1,13 @@
 function fact(num){
-	var result = 1
-	for (var i = 1; i <= num; i++) {
-		result *= i
-	}
+	let result = 1
+	for (let i = 1; i <= num; i++) { result *= i }
 	return result
 }
 
 function textSize(size){
-	document.getElementById("txt2").style.fontSize = `${size}em`
-	document.getElementById("txt3").style.fontSize = `${size}em`
-	document.getElementById("txt4").style.fontSize = `${size}em`
-	document.getElementById("txt5").style.fontSize = `${size}em`
+	for (let i of ["txt2", "txt3", "txt4", "txt5"]){
+		document.getElementById(i).style.fontSize = `${size}em`
+  	}
 }
 
 function update(){
@@ -18,7 +15,7 @@ function update(){
 
 	//se reemplaza la formula de la derivada por la fucion f(x)=x^exponent
 	document.getElementById("txt1").innerHTML = `lim h -> 0 ((x + h)^${exponent} - x^${exponent})/h`
-	var binomiumInnerResult = ""
+	let binomiumInnerResult = ""
 
 	for (var i = 1; i < exponent; i++) {
 		binomiumInnerResult += (fact(exponent)/(fact(i)*fact(exponent-i))).toString()
@@ -26,7 +23,7 @@ function update(){
 		binomiumInnerResult += `(h${i > 1 ? "^"+(i).toString() : ""}) `
 		binomiumInnerResult += "+ "
 	}
-	var secondLine = `(x^${exponent} + ${binomiumInnerResult}h^${exponent} - x^${exponent})/h`
+	let secondLine = `(x^${exponent} + ${binomiumInnerResult}h^${exponent} - x^${exponent})/h`
 
 	if(exponent > 6){
 		textSize(2*(95/secondLine.length))
